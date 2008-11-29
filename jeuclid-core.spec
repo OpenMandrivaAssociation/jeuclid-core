@@ -17,7 +17,7 @@ BuildRequires:	batik
 BuildRequires:	jakarta-commons-logging
 BuildRequires:	jcip-annotations
 BuildRequires:	xml-commons-apis
-BuildRequires:	xmlgraphics-commons
+BuildRequires:	xmlgraphics-commons >= 1.3.1
 Requires:	jpackage-utils
 Requires:	java >= 1.5
 BuildArch:	noarch
@@ -43,7 +43,7 @@ rm -f jeuclid-core/src/main/java/net/sourceforge/jeuclid/converter/FreeHep*;
 
 %build
 cd jeuclid-core
-%ant
+%ant 
 
 %install
 rm -rf %{buildroot}
