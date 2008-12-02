@@ -1,7 +1,7 @@
 Summary:	MathML rendering solution for Java
 Name:		jeuclid-core
 Version:	3.1.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		Development/Java
 License:	ASL 2.0
 URL:		http://jeuclid.sourceforge.net/
@@ -20,6 +20,8 @@ BuildRequires:	xml-commons-apis
 BuildRequires:	xmlgraphics-commons >= 1.3.1
 Requires:	jpackage-utils
 Requires:	java >= 1.5
+Requires:	xmlgraphics-commons
+Requires:	batik
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -51,10 +53,16 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_javadir}
 cp -p jeuclid-core/target/jeuclid-core.jar %{buildroot}%{_javadir}/%{name}-%{version}.jar
 
+pushd %{buildroot}%{_javadir}
+    for jar in *-%{version}*; do
+	ln -sf ${jar} `echo $jar| sed "s|-%{version}||g"`
+    done
+popd
+
 %clean
 rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
 %doc NOTICE LICENSE.txt README.Release
-%{_javadir}/%{name}-%{version}.jar
+%{_javadir}/%{name}*.jar
