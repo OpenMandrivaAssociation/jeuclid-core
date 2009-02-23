@@ -1,7 +1,7 @@
 Summary:	MathML rendering solution for Java
 Name:		jeuclid-core
-Version:	3.1.3
-Release:	%mkrel 2
+Version:	3.1.4
+Release:	%mkrel 1
 Group:		Development/Java
 License:	ASL 2.0
 URL:		http://jeuclid.sourceforge.net/
