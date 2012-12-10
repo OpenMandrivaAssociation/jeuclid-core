@@ -66,3 +66,33 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %doc NOTICE LICENSE.txt README.Release
 %{_javadir}/%{name}*.jar
+
+
+%changelog
+* Mon Dec 06 2010 Oden Eriksson <oeriksson@mandriva.com> 3.1.4-4mdv2011.0
++ Revision: 612444
+- the mass rebuild of 2010.1 packages
+
+* Thu Apr 29 2010 Tomasz Pawel Gajc <tpg@mandriva.org> 3.1.4-3mdv2010.1
++ Revision: 540944
+- rebuild
+
+* Fri Sep 11 2009 Thierry Vignaud <tv@mandriva.org> 3.1.4-2mdv2010.0
++ Revision: 438018
+- rebuild
+
+* Mon Feb 23 2009 Tomasz Pawel Gajc <tpg@mandriva.org> 3.1.4-1mdv2009.1
++ Revision: 344075
+- update to new version 3.1.4
+
+* Tue Dec 02 2008 Tomasz Pawel Gajc <tpg@mandriva.org> 3.1.3-2mdv2009.1
++ Revision: 309306
+- create jeuclid-core,jar symlink
+- add requires on batik and xmlgraphics-commons
+
+* Sat Nov 29 2008 Tomasz Pawel Gajc <tpg@mandriva.org> 3.1.3-1mdv2009.1
++ Revision: 308096
+- versionate buildrequires on xmlgraphics-commons 1.3.1
+- add source and spec files
+- Created package structure for jeuclid-core.
+
