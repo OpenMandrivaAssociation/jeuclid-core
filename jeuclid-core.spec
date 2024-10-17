@@ -4,7 +4,7 @@ Version:	3.1.4
 Release:	5
 Group:		Development/Java
 License:	ASL 2.0
-URL:		http://jeuclid.sourceforge.net/
+URL:		https://jeuclid.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/jeuclid/jeuclid-parent-%{version}-src.zip
 #patch points the ant to the correct jars 
 Patch0:		jeuclid-core-build.patch
